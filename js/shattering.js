@@ -1,13 +1,11 @@
-// triangulation using https://github.com/ironwallaby/delaunay
-
 const TWO_PI = Math.PI * 2;
 
 var images = [],
     imageIndex = 0;
 
 var image,
-    imageWidth = 768,
-    imageHeight = 485;
+    imageWidth = 1920,
+    imageHeight = 1080;
 
 var vertices = [],
     indices = [],
@@ -17,29 +15,22 @@ var container = document.getElementById('container');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
-window.onload = function() {
+ function tmark() {
     TweenMax.set(container, {perspective:500});
 
     // images from reddit/r/wallpapers
     var urls = [
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/crayon.jpg',
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/spaceship.jpg',
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/dj.jpg',
-            'https://s3-us-west-2.amazonaws.com/s.cdpn.io/175711/chicken.jpg'
+        './img/black.jpg',
+            
         ],
         image,
         loaded = 0;
     // very quick and dirty hack to load and display the first image asap
     images[0] = image = new Image();
         image.onload = function() {
-            if (++loaded === 1) {
+            
                 imagesLoaded();
-                for (var i = 1; i < 4; i++) {
-                    images[i] = image = new Image();
-
-                    image.src = urls[i];
-                }
-            }
+               
         };
         image.src = urls[0];
 };
@@ -51,33 +42,14 @@ function imagesLoaded() {
 }
 
 function placeImage(transitionIn) {
-    image = images[imageIndex];
-
-    if (++imageIndex === images.length) imageIndex = 0;
-
-    image.addEventListener('click', imageClickHandler);
-    container.appendChild(image);
-
-    if (transitionIn !== false) {
-        TweenMax.fromTo(image, 0.75, {y:-1000}, {y:0, ease:Back.easeOut});
-    }
+    image = images[imageIndex];      
 }
 
-function imageClickHandler(event) {
-    var box = image.getBoundingClientRect(),
-        top = box.top,
-        left = box.left;
 
-    clickPosition[0] = event.clientX - left;
-    clickPosition[1] = event.clientY - top;
-
-    triangulate();
-    shatter();
-}
 
 function triangulate() {
     var rings = [
-            {r:100, c:50},
+            {r:50, c:50},
             {r:200, c:50},
             {r:500, c:50},
             {r:2000, c:50} // very large in case of corner clicks
@@ -147,8 +119,8 @@ function shatter() {
         container.appendChild(fragment.canvas);
     }
 
-    container.removeChild(image);
-    image.removeEventListener('click', imageClickHandler);
+    
+    
 }
 
 function shatterCompleteHandler() {
