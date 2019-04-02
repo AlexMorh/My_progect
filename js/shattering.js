@@ -206,3 +206,24 @@ Fragment.prototype = {
         this.ctx.drawImage(image, 0, 0);
     }
 };
+
+document.body.onload=function(){
+setTimeout(function(){
+var container = document.getElementById('container');
+console.log(container);
+
+var color = document.getElementById('color');
+container.style.opacity=0;
+container.style.visibility='hidden';
+setTimeout(function(){
+tmark();
+
+})
+setTimeout(function(){
+clearInterval();
+clearInterval();
+color.style.opacity=0;
+color.style.visibility='hidden';
+});
+})
+}
