@@ -214,18 +214,12 @@ var preloader = document.getElementById('preloader').remove();
 console.log(preloader);
 
 var color = document.getElementById('color').remove();
-preloader.style.opacity=0;
-preloader.style.visibility='hidden';
 setTimeout(function(){
 tmark();
 })
-var preloader = document.getElementById('container').remove();
+var container = document.getElementById('container').remove();
 console.log(container);
 setTimeout(function(){
-clearInterval();
-clearInterval();
-color.style.opacity=0;
-color.style.visibility='hidden';
 });
 },16000)
 }
