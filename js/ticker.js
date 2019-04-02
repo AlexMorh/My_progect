@@ -64,24 +64,24 @@ window.addEventListener('load', () => {
   }, 12000)
 });
 
-document.body.onload=function(){
-setTimeout(function(){
-var preloader = document.getElementById('preloader');
-console.log(preloader);
+// document.body.onload=function(){
+// setTimeout(function(){
+// var preloader = document.getElementById('preloader').remove();
+// console.log(preloader);
 
-var color = document.getElementById('color');
-preloader.style.opacity=0;
-preloader.style.visibility='hidden';
-setTimeout(function(){
-tmark();
+// var color = document.getElementById('color').remove();
+// preloader.style.opacity=0;
+// preloader.style.visibility='hidden';
+// setTimeout(function(){
+// tmark();
 
-})
-setTimeout(function(){
-clearInterval();
-clearInterval();
-color.style.opacity=0;
-color.style.visibility='hidden';
-});
-},13000)
-}
+// })
+// setTimeout(function(){
+// clearInterval();
+// clearInterval();
+// color.style.opacity=0;
+// color.style.visibility='hidden';
+// });
+// },13000)
+// }
 
