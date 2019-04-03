@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
 body {
+  overflow-x: hidden;
   margin: 0;
-  overflow: hidden;
+  padding: 0;
 }
 #preloader{
   position: absolute;
@@ -56,10 +57,7 @@ canvas {
     -ms-backface-visibility: hidden;
 }
 
-img {
-    position: absolute;
-    cursor: pointer;
-}
+
 
 #container {
     position: absolute;

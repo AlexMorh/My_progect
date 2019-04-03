@@ -11,12 +11,12 @@ var vertices = [],
     indices = [],
     fragments = [];
 
-var container = document.getElementById('container');
+var container_shattering = document.getElementById('container_shattering');
 
 var clickPosition = [imageWidth * 0.5, imageHeight * 0.5];
 
  function tmark() {
-    TweenMax.set(container, {perspective:500});
+    TweenMax.set(container_shattering, {});
 
     // images from reddit/r/wallpapers
     var urls = [
@@ -49,10 +49,10 @@ function placeImage(transitionIn) {
 
 function triangulate() {
     var rings = [
-            {r:50, c:50},
+            {r:50, c:40},
             {r:200, c:50},
-            {r:500, c:50},
-            {r:2000, c:50} // very large in case of corner clicks
+            {r:500, c:60},
+            {r:1000, c:70} // very large in case of corner clicks
         ],
         x,
         y,
@@ -116,7 +116,7 @@ function shatter() {
         tl0.insert(tl1, delay);
 
         fragments.push(fragment);
-        container.appendChild(fragment.canvas);
+        container_shattering.appendChild(fragment.canvas);
     }
 
     
@@ -126,7 +126,7 @@ function shatter() {
 function shatterCompleteHandler() {
     // add pooling?
     fragments.forEach(function(f) {
-        container.removeChild(f.canvas);
+        container_shattering.removeChild(f.canvas);
     });
     fragments.length = 0;
     vertices.length = 0;
@@ -208,18 +208,18 @@ Fragment.prototype = {
 };
 
 
-document.body.onload=function(){
-setTimeout(function(){
-var preloader = document.getElementById('preloader').remove();
-console.log(preloader);
+// document.body.onload=function(){
+// setTimeout(function(){
+// var preloader = document.getElementById('preloader').remove();
+// console.log(preloader);
 
-var color = document.getElementById('color').remove();
-setTimeout(function(){
-tmark();
-})
-var container = document.getElementById('container').remove();
-console.log(container);
-setTimeout(function(){
-});
-},16000)
-}
+// var color = document.getElementById('color').remove();
+// setTimeout(function(){
+// tmark();
+// })
+// var container_shattering = document.getElementById('container_shattering').remove();
+// console.log(container_shattering);
+// setTimeout(function(){
+// });
+// },16000)
+// }
