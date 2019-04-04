@@ -4,8 +4,8 @@ var images = [],
     imageIndex = 0;
 
 var image,
-    imageWidth = 1920,
-    imageHeight = 1080;
+    imageWidth = screen.width,
+    imageHeight = screen.height;
 
 var vertices = [],
     indices = [],
