@@ -207,7 +207,7 @@ Fragment.prototype = {
     }
 };
 
-  wrapper.style.opacity=1;
+
 // document.body.onload=function(){
 // setTimeout(function(){
 // var preloader = document.getElementById('preloader').remove();
