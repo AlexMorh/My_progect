@@ -82,7 +82,6 @@ clearInterval();
 color.style.opacity=0;
 color.style.visibility='hidden';
 body.style.overflow='visible';
-wrapper.style.opacity=1;
 });
 },13000)
 }
