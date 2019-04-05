@@ -1,78 +1,13 @@
-@import url(https://fonts.googleapis.com/css?family=Khula:700);
-body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto Slab', serif;
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+body{
+    position: relative;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    
+    font-family: 'Shadows Into Light', Arial, cursive, sans-serif;
 }
-
-/*Preloader*/
-
-#preloader{
-  position: absolute;
-   z-index: 100000;
-  width: 100%;
-  height: 100%;
-  top: 0; left: 0; bottom: 0; right: 0;
-  background: #000;
-}
-.hidden {
-  opacity:0;
-  transition: 0.5s;
-}
-
-.console-container {
- 
-  font-family:Khula;
-  font-size:4em;
-  text-align:center;
-  height:200px;
-  width:600px;
-  display:block;
-  position: absolute;
-   z-index: 1000000;
-  color:white;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  margin:auto;
-}
-
-.console-underscore {
-   display:inline-block;
-  position:relative;
-  top:-0.14em;
-  left:10px;
-}
-#color{
-  position:relative;
-  background:black;
-  width:100%;
-  height:100%;
-  visibility:visible;
-  transition:5s all;
-  opacity:1;
-}
-
-canvas {
-    position: absolute;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-}
-
-#container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin: auto;
-    overflow: none;
-    top: 0; left: 0; bottom: 0; right: 0;
-}
-
-/*Scrollbar*/
+/*Custom-Scrollbar*/
 .scrollbar__override::-webkit-scrollbar-track
 {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -90,12 +25,11 @@ canvas {
     background-color: #000000;
 }
 /*END Custom-Scrollbar*/
-
-.main{
+.fullscr{
     width: 100%;
 /*    height: 100vh;*/
 }
-.main__sl,
+.sl,
 .sl__slide{
     width: 100%;
     height: 100vh;
@@ -439,13 +373,13 @@ canvas {
     clip:rect(0,900px,0,0);
     animation:noise-anim-2 3s infinite linear alternate-reverse;
 }
-
+/*END GLITCH*/
 
 /*MODAL*/
 html.modal-active, body.modal-active {
     overflow: hidden;
 }
-#main__modal-container {
+#modal-container {
     position: fixed;
     display: table;
     height: 100%;
@@ -455,29 +389,29 @@ html.modal-active, body.modal-active {
     transform: scale(0);
     z-index: 1;
 }
-#main__modal-container.one {
+#modal-container.one {
     transform: scaleY(0.01) scaleX(0);
     animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#main__modal-container.one .modal-container__background .modal {
+#modal-container.one .modal-background .modal {
     transform: scale(0);
     animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#main__modal-container.one.out {
+#modal-container.one.out {
     transform: scale(1);
     animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
-#main__modal-container.one.out .modal-container__background .modal {
+#modal-container.one.out .modal-background .modal {
     animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 
-#main__modal-container .modal-container__background {
+#modal-container .modal-background {
     display: table-cell;
     background: rgba(0, 0, 0, .8);
     text-align: center;
     vertical-align: middle;
 }
-#main__modal-container .modal-container__background .modal {
+#modal-container .modal-background .modal {
     background: white;
     padding: 200px;
     display: inline-block;
@@ -486,12 +420,12 @@ html.modal-active, body.modal-active {
     position: relative;
     z-index: 5;
 }
-#main__modal-container .modal-container__background .modal h2 {
+#modal-container .modal-background .modal h2 {
     font-size: 25px;
     line-height: 25px;
     margin-bottom: 15px;
 }
-#main__modal-container .modal-container__background .modal p {
+#modal-container .modal-background .modal p {
     font-size: 18px;
     line-height: 22px;
 }
@@ -581,6 +515,7 @@ html.modal-active, body.modal-active {
 }
 
 
+/*END MODAL*/
 
 /*FOOTER*/
 .footer {
@@ -599,4 +534,3 @@ html.modal-active, body.modal-active {
     max-width: 60em;
     margin: 0 auto;
 }
-
