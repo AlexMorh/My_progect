@@ -1,4 +1,4 @@
-$('.sl').slick({
+$('.main__sl').slick({
     arrows: false,
     dots: true,
     infinite: true,
@@ -26,7 +26,7 @@ $('.tile')
     .on('dblclick', function(){
         $('.slick-dots').css({'display':'none'});
         $('.close').css({'display':'block'});
-        $('.sl').css({'height':'80vh'});
+        $('.main__sl').css({'height':'80vh'});
         $('.sl__slide').css({'height':'80vh'});
         $('.sl2').css({'display':'block'});
         $('.footer').css({'display':'block'});
@@ -73,7 +73,7 @@ $('.close')
         $('.footer').css({'display':'none'});
         $('.close').css({'display':'none'});
         $('.slick-dots').css({'display':'block'});
-        $('.sl').css({'height':'100vh'});
+        $('.main__sl').css({'height':'100vh'});
         $('.sl__slide').css({'height':'100vh'});
 
         $('.img1').attr('src', "img/br1.jpeg");
@@ -90,11 +90,11 @@ $('.close')
 //MODAL switch
 $('.button').click(function(){
     var buttonId = $(this).attr('id');
-    $('#modal-container').removeAttr('class').addClass(buttonId);
+    $('#main__modal-container').removeAttr('class').addClass(buttonId);
     $('body').addClass('modal-active');
 })
 
-$('#modal-container').click(function(){
+$('#main__modal-container').click(function(){
     $(this).addClass('out');
     $('body').removeClass('modal-active');
 });
