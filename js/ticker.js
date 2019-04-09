@@ -11,7 +11,6 @@ function consoleText(words, id, colors) {
   var waiting = false;
   var target = document.getElementById(id)
   target.setAttribute('style', 'color:' + colors[0])
-  body.style.overflow='hidden'
 
   window.setInterval(function() {
 
