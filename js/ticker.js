@@ -80,7 +80,6 @@ clearInterval();
 clearInterval();
 color.style.opacity=0;
 color.style.visibility='hidden';
-body.style.overflow='visible';
 });
 },13000)
 }
