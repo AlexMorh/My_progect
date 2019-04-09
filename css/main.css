@@ -582,21 +582,3 @@ html.modal-active, body.modal-active {
 
 
 
-/*FOOTER*/
-.footer {
-    display: none;
-    overflow: hidden;
-    perspective: 500px;
-    transform-style: preserve-3d;
-}
-.footer_block {
-    padding: 5% 1.5em;
-    transform-origin: center bottom;
-    background: #606060;
-    color: #b0b0b0;
-}
-.wrapper {
-    max-width: 60em;
-    margin: 0 auto;
-}
-
