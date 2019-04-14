@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>It's Matrix</title>
+    <link rel="stylesheet" href="styles/style.css">
+	<!-- Created by Freeman -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>	
+  </head>
+  <script type="text/javascript">$(window).on('load', function () {
+    var $preloader = $('#p_prldr'),
+        $svg_anm   = $preloader.find('load.svg');
+    $svg_anm.fadeOut();
+    $preloader.delay(1000).fadeOut('slow');
+});</script>
+  <body>
+
+	<div id="p_prldr">
+		<div class="contpre">
+			<span class="svg_anm"></span>
+			<br>Downloading...<br>
+			<small>MATRIX</small>
+		</div>
+	</div>
+ 
+    <span id="test"></span>
+    <span id="cursor">|</span>
+
+    <div id="audio">
+      <div id="name"></div>
+      <audio autoplay autostart="true" id="player"></audio>
+      <div id="clue">*ЛКМ - предыдущий трек/заново, ПКМ - следующий трек</div>
+      <br>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/audio.js"></script>
+   </body>
+</html>
+		

@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  font-family: monospace;
+  color: #00ff00;
+  padding: 8px;
+  line-height: 2rem;
+}
+
+#cursor {
+  margin-left: -8px;
+  animation: color 1s cubic-bezier(0, -100, 1, 100);
+  animation-iteration-count: infinite;
+}
+
+@keyframes color {
+  from {color: inherit;}
+  to {color: black}
+}
+
+#audio {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  text-align: right;
+}
+
+#name {
+  font-size: 18px;
+}
+
+#clue {
+  color: #757575;
+}

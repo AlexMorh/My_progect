@@ -102,27 +102,85 @@ body{
     height: 20vh;
     padding: 50px 0 10px 0;
 }
-.container__header{
+.description__header{
     margin: 0;
     padding: 0;
     text-transform: uppercase;
     font-size: 2rem;
 }
-.container__text{
+.description__text{
     margin: 0;
     padding: 20px 20px 0 20px;
 }
-.container__music__link {
-    text-align: center;
-    width: 150px;
-    height: 30px;
-    margin: 30px;
-    padding: 10px;
-    font-size: 20px;
-    color: #000;
-    border: 1px solid;
-    border-radius: 6px;
-    text-decoration: none;
+.container__music {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 100;
+  padding: 30px;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+a span {
+  font-weight: 100;
+  transition: all 0.5s;
+  border-bottom: 1px solid;
+}
+a span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+a span:nth-child(3) {
+  transition-delay: 0.15s;
+}
+a span:nth-child(4) {
+  transition-delay: 0.2s;
+}
+span:nth-child(5) {
+  transition-delay: 0.25s;
+}
+a span:nth-child(6) {
+  transition-delay: 0.3s;
+}
+a span:nth-child(7) {
+  transition-delay: 0.35s;
+}
+a span:nth-child(8) {
+  transition-delay: 0.4s;
+}
+a:hover span {
+  font-weight: 700;
+}
+a:hover span:nth-child(8) {
+  transition-delay: 0.4s;
+}
+a:hover span:nth-child(7) {
+  transition-delay: 0.35s;
+}
+a:hover span:nth-child(6) {
+  transition-delay: 0.3s;
+}
+a:hover span:nth-child(5) {
+  transition-delay: 0.25s;
+}
+a:hover span:nth-child(4) {
+  transition-delay: 0.2s;
+}
+a:hover span:nth-child(3) {
+  transition-delay: 0.15s;
+}
+a:hover span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+a:hover span:nth-child(1) {
+  transition-delay: 0s;
+}
+a.hover-shadow:hover {
+  text-shadow: 1px 1px 0px #ddd, 2px 2px 0px #ddd, 3px 3px 0px #ddd;
+}
+a.hover-color:hover {
+  border-color: darkmagenta;
 }
 .container__img {
     width: 100%;
@@ -432,7 +490,7 @@ html.modal-active, body.modal-active {
     position: relative;
     z-index: 5;
 }
-#modal-container .modal-background .modal h2 {
+#modal-container .modal-background .modal {
     font-size: 25px;
     line-height: 25px;
     margin-bottom: 15px;

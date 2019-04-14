@@ -1,0 +1,344 @@
+* {
+  box-sizing: border-box;
+  position: relative; }
+  *::after, *::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute; }
+
+footer {
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  background-color: #361d2e;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden; }
+
+.frank-einstein-monster {
+  height: 50vmin;
+  width: 50vmin;
+  align-items: center;
+  color: #e3ba59;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.head {
+  height: 100%;
+  width: 40vmin;
+  animation: 8s ease-in-out infinite levitate;
+  background-image: radial-gradient(ellipse farthest-corner, currentColor, #d0ab54);
+  border-radius: 1vmin; }
+  .head > .hair::after, .head > .hair::before {
+    height: 100%;
+    width: 8%;
+    background-color: currentColor; }
+  .head > .hair {
+    height: 40%;
+    width: 100%;
+    border-top: 1.4vmin solid #eee;
+    border-radius: 1vmin 1vmin 0 0;
+    color: #eee;
+    position: absolute; }
+    .head > .hair::after {
+      /* left side hair */
+      border-bottom-right-radius: 80%; }
+    .head > .hair::before {
+      /* right side hair */
+      border-bottom-left-radius: 80%;
+      right: 0; }
+    .head > .hair .bangs {
+      height: 200%;
+      width: 50%;
+      background-color: currentColor;
+      clip-path: polygon(0% 0%, 5% 10%, 10% 3%, 14% 13%, 21% 2%, 22% 27%, 30% 2%, 38% 29%, 43% 2%, 48% 16%, 52% 3%, 54% 22%, 57% 3%, 62% 9%, 66% 1%, 72% 20%, 73% 2%, 79% 9%, 80% 3%, 86% 13%, 89% 3%, 93% 10%, 99% 0%);
+      left: calc(50% - 25%);
+      position: absolute; }
+
+.staples {
+  height: 12%;
+  width: 100%;
+  position: absolute; }
+  .staples .staple {
+    background-image: linear-gradient(to right, #ac7906, #c58a07, #ac7906);
+    clip-path: polygon(0% 0%, 8% 100%, 83% 100%, 100% 0%);
+    position: absolute; }
+    .staples .staple1 {
+      height: 100%;
+      width: 8%;
+      left: 9%; }
+    .staples .staple2 {
+      height: 60%;
+      width: 4%;
+      left: 21%; }
+    .staples .staple3 {
+      height: 90%;
+      width: 6%;
+      right: 8%; }
+    .staples .staple4 {
+      height: 80%;
+      width: 5%;
+      right: 20%; }
+
+.scar {
+  height: 15%;
+  width: 0.4vmin;
+  background-color: #342709;
+  border-radius: 100%;
+  left: 18%;
+  position: absolute;
+  top: 12%;
+  transform: rotateZ(-30deg); }
+  .scar::before {
+    /* stitches */
+    height: 0.3vmin;
+    width: 550%;
+    background-color: #eee;
+    box-shadow: 0 1.5vmin 0 0 #eee, 0 3vmin 0 0 #eee, 0 4.5vmin 0 0 #eee, 0 6vmin 0 0 #eee;
+    left: calc(-275% + 0.2vmin);
+    top: 10%; }
+
+.eyes {
+  height: 6vmin;
+  width: 100%;
+  position: absolute;
+  top: 35%; }
+  .eyes .left, .eyes .right {
+    height: 100%;
+    width: 6vmin;
+    background-color: #eee;
+    border: 0.4vmin solid #282828;
+    border-radius: 100%;
+    position: absolute; }
+    .eyes .left::after, .eyes .right::after {
+      /* eyebrown */
+      height: 40%;
+      width: 120%;
+      background-color: rgba(40, 40, 40, 0.9);
+      filter: blur(0.1px);
+      top: -60%; }
+    .eyes .left::before, .eyes .right::before {
+      /* pupil */
+      height: 25%;
+      width: 25%;
+      background-color: #282828;
+      border-radius: 100%;
+      left: calc(50% - 12.5%);
+      top: calc(50% - 12.5%); }
+  .eyes .left {
+    left: calc(33% - 3vmin); }
+    .eyes .left::after {
+      animation: 14s ease-in-out 2.4s infinite eyebrowns-game-left;
+      transform: skew(-10deg) rotateZ(-10deg) translateX(-20%); }
+  .eyes .right {
+    right: calc(33% - 3vmin); }
+    .eyes .right::after {
+      animation: 14s ease-in-out 2.4s infinite eyebrowns-game-right;
+      transform: skew(10deg) rotateZ(10deg) translateX(10%); }
+
+.ears {
+  height: 22%;
+  width: 118%;
+  background-image: radial-gradient(ellipse farthest-corner, currentColor, #d0ab54);
+  border-radius: 4vmin 3vmin 5vmin 4vmin;
+  left: -9%;
+  mix-blend-mode: color;
+  position: absolute;
+  top: 40%;
+  z-index: -1; }
+  .ears::before {
+    /* left inner ear */
+    height: 60%;
+    width: 6%;
+    background-color: rgba(134, 113, 65, 0.4);
+    border-radius: 100%;
+    left: 2%;
+    top: 20%;
+    transform: rotateZ(-8deg); }
+  .ears::after {
+    /* right inner ear */
+    height: 60%;
+    width: 6%;
+    background-color: rgba(134, 113, 65, 0.4);
+    border-radius: 100%;
+    right: 2%;
+    top: 20%;
+    transform: rotateZ(8deg); }
+
+.nose {
+  height: 25%;
+  width: 26%;
+  background-color: #e3ba59;
+  border-top-color: transparent;
+  border-radius: 100%;
+  box-shadow: inset 0.6vmin -0.6vmin 0.2vmin 0 #867141, inset -0.6vmin -0.6vmin 0.2vmin 0 #867141;
+  left: calc(50% - 13%);
+  top: calc(35% + 5vmin); }
+
+.moustache {
+  height: 30%;
+  width: 70%;
+  align-items: center;
+  animation: 14s ease-in-out infinite shake-moustache;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  left: 15%;
+  position: absolute;
+  top: 57%; }
+  .moustache::after {
+    /* left side */
+    height: 100%;
+    width: 15%;
+    background-color: currentColor;
+    border-radius: 5vmin 100%;
+    transform: rotateZ(45deg);
+    transform-origin: top center; }
+  .moustache::before {
+    /* right side */
+    height: 100%;
+    width: 15%;
+    background-color: currentColor;
+    border-radius: 5vmin 100%;
+    transform: rotateZ(-45deg);
+    transform-origin: top center; }
+  .moustache .center-hairs {
+    height: 40%;
+    width: 60%;
+    align-items: center;
+    display: flex;
+    justify-content: center; }
+    .moustache .center-hairs .hair {
+      height: 100%;
+      width: 20%;
+      background-color: currentColor;
+      border-radius: 5vmin 100%; }
+
+.tongue {
+  height: 22%;
+  width: 18%;
+  animation: 14s ease-in-out infinite tongue-out;
+  background-color: #ef7d94;
+  border-radius: 0 0 100% 100%;
+  left: calc(50% - 9%);
+  position: absolute;
+  top: 58%;
+  transform-origin: top center; }
+  .tongue::before {
+    /* tongue line */
+    height: 50%;
+    width: 8%;
+    background-color: #db7589;
+    background-image: radial-gradient(ellipse farthest-corner, #c76c7e, #ef7d94);
+    border-radius: 100%;
+    left: calc(50% - 4%);
+    top: 25%; }
+
+.terminals {
+  height: 8%;
+  width: 100%;
+  align-items: center;
+  bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute; }
+  .terminals .left, .terminals .right {
+    height: 100%;
+    width: 15%;
+    background-image: linear-gradient(to bottom, #cbc0ad, #eee, #cbc0ad); }
+    .terminals .left::before, .terminals .right::before {
+      height: 120%;
+      width: 25%;
+      background-image: linear-gradient(to bottom, #cbc0ad, #eee, #cbc0ad);
+      top: -10%; }
+  .terminals .left {
+    left: -15%; }
+    .terminals .left::before {
+      border-radius: 50% 0 0 50%;
+      box-shadow: inset -0.4vmin 0 0 0 #bbb1a0;
+      left: -25%; }
+  .terminals .right {
+    right: -15%; }
+    .terminals .right::before {
+      border-radius: 0 50% 50% 0;
+      box-shadow: inset 0.4vmin 0 0 0 #bbb1a0;
+      right: -25%; }
+
+.head-shadow {
+  height: 4vmin;
+  width: 32vmin;
+  animation: 8s ease-in-out infinite shadow;
+  background-color: #251420;
+  bottom: -20%;
+  border-radius: 100%; }
+
+.sign {
+  bottom: 1vmin;
+  color: #282828;
+  font-family: "Fredericka the Great", cursive;
+  font-size: 2rem;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100vw; }
+
+/* Animation */
+@keyframes tongue-out {
+  0%,
+  2%,
+  19% {
+    transform: translateY(0); }
+  4% {
+    transform: translateY(75%); }
+  9% {
+    transform: translateY(75%) rotateZ(25deg); }
+  14% {
+    transform: translateY(75%) rotateZ(-25deg); } }
+@keyframes shake-moustache {
+  0%,
+  2%,
+  19% {
+    transform: rotateZ(0); }
+  4%,
+  14% {
+    transform: rotateZ(-2deg); }
+  9% {
+    transform: rotateZ(2deg); } }
+@keyframes eyebrowns-game-left {
+  0%,
+  10%,
+  14%,
+  18% {
+    transform: skew(-10deg) rotateZ(-10deg) translateX(-20%) translateY(0); }
+  12%,
+  16% {
+    transform: skew(-10deg) rotateZ(-10deg) translateX(-20%) translateY(-30%); } }
+@keyframes eyebrowns-game-right {
+  0%,
+  10%,
+  14%,
+  18% {
+    transform: skew(10deg) rotateZ(10deg) translateX(10%) translateY(0); }
+  12%,
+  16% {
+    transform: skew(10deg) rotateZ(10deg) translateX(10%) translateY(-30%); } }
+@keyframes levitate {
+  0%,
+  50%,
+  100% {
+    transform: translateY(3%); }
+  25%,
+  75% {
+    transform: translateY(-3%); } }
+@keyframes shadow {
+  0%,
+  50%,
+  100% {
+    transform: scale(1.05) rotateX(45deg); }
+  25%,
+  75% {
+    transform: scale(0.95) rotateX(45deg); } }
+
+/*# sourceMappingURL=einstein.css.map */
