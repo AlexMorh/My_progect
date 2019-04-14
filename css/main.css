@@ -54,7 +54,16 @@ body {
   transition:5s all;
   opacity:1;
 }
+#three-container canvas {
 
+    margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) scale(0.5);
+}
 canvas {
     position: absolute;
     backface-visibility: hidden;
@@ -582,21 +591,5 @@ html.modal-active, body.modal-active {
 
 
 
-/*FOOTER*/
-.footer {
-    display: none;
-    overflow: hidden;
-    perspective: 500px;
-    transform-style: preserve-3d;
-}
-.footer_block {
-    padding: 5% 1.5em;
-    transform-origin: center bottom;
-    background: #606060;
-    color: #b0b0b0;
-}
-.wrapper {
-    max-width: 60em;
-    margin: 0 auto;
-}
+
 
