@@ -93,6 +93,12 @@ body{
 /*END Close button*/
 
 /*Main-Content*/
+.s12 {
+    background: #fff;
+}
+.night {
+    background: #000;
+}
 .container{
     width: 70%;
     margin: 0 auto;
@@ -586,6 +592,40 @@ html.modal-active, body.modal-active {
 
 
 /*END MODAL*/
+
+/*SWITCH BUTTON*/
+#switch,
+#circle {
+  height: 30px;
+  -webkit-transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+          transition: all 0.4s cubic-bezier(0.54, 1.6, 0.5, 1);
+} 
+#switch {
+  width: 60px;
+  margin: 0 auto;
+  border: 2px solid #DA8508;
+  border-radius: 27px;
+  background: #DA8508;
+  position: relative;
+}
+#circle {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 40%;
+  height: 80%;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
+  background: #e9e5d5;
+}
+.switched {
+  border-color: #1C3958 !important;
+  background: #1C3958 !important;
+}
+.switched #circle {
+  margin-left: 55%;
+  background: #e9e5d5;
+}
+
 
 /*FOOTER*/
 .footer {
